@@ -1,0 +1,35 @@
+stack = []
+def push(value):
+    stack.append(value)
+    print(value, "pushed into stack")
+def pop():
+    if not stack:
+        print("Stack Underflow")
+    else:
+        print(stack.pop(), "popped from stack")
+def peek():
+    if not stack:
+        print("Stack is empty")
+    else:
+        print("Top element =", stack[-1])
+def display():
+    if not stack:
+        print("Stack is empty")
+    else:
+        print("Stack elements:", *stack[::-1])
+push(10)
+push(20)
+push(30)
+display()
+peek()
+pop()
+display()
+
+OUTPUT:
+10 pushed into stack
+20 pushed into stack
+30 pushed into stack
+Stack elements: 30 20 10
+Top element = 30
+30 popped from stack
+Stack elements: 20 10
